@@ -1,14 +1,10 @@
 {% load static %}
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-      <!-- Toggle button -->
 
-  
-      <!-- Collapsible wrapper -->
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+    <div class="container-fluid">
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- Navbar brand -->
+
         <a class="navbar-brand mt-2 mt-lg-0" href="#">
           <img
             src="{% static 'img/onlyflans.png' %}"
@@ -17,7 +13,7 @@
             loading="lazy"
           />
         </a>
-        <!-- Left links -->
+
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" href="{% url 'index' %}">Productos</a>
@@ -29,18 +25,15 @@
             <a class="nav-link" href="{% url 'welcome' %}">Bienvenido Cliente</a>
           </li>
         </ul>
-        <!-- Left links -->
       </div>
-      <!-- Collapsible wrapper -->
-  
-      <!-- Right elements -->
+
       <div class="d-flex align-items-center">
-        <!-- Icon -->
+
         <a class="text-reset me-3" href="#">
           <i class="fas fa-shopping-cart"></i>
         </a>
 
-        <!-- Avatar -->
+
         <div class="dropdown">
           <a
             data-mdb-dropdown-init
@@ -74,8 +67,5 @@
           </ul>
         </div>
       </div>
-      <!-- Right elements -->
     </div>
-    <!-- Container wrapper -->
   </nav>
-  <!-- Navbar -->
