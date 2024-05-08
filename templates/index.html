@@ -1,7 +1,17 @@
 {% extends 'base.html' %} 
-
+{% load static %}
 
 {% block 'content' %}
 
+{% for flan in flanes  %}
+  <div class="card" style="width: 18rem;">
+    <img src="{{flan.imagen}}" class="card-img-top" alt="card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{flan.name}}</h5>
+        <p class="card-text">{{flan.descripcion}}</p>
+        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+       </div>
+    </div>
+  {% endfor %}
 {% endblock 'content' %}
 
