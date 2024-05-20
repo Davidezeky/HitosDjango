@@ -51,7 +51,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'welcome'
+LOGOUT_REDIRECT_URL = 'login'  
 ROOT_URLCONF = 'onlyflans.urls'
+
+
 
 TEMPLATES = [
     {
@@ -64,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'web.proceso_carrito.total_carrito',
             ],
         },
     },

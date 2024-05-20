@@ -11,24 +11,40 @@
 </head>
 <body>
 
-{% block 'navbar' %}
+{% block navbar %}
 {% include "includes/navbar.html" %}
-{% endblock 'navbar' %}
+{% endblock navbar %}
 
 
-{% block 'header' %}
+{% block header %}
 {% include "includes/header.html" %}
-{% endblock 'header' %}
-
-
+{% endblock header %}
+ 
 
 {% block content %}
-
+{% block 'content' %}
+<div class="container mt-4">
+  <div class="row">
+    {% for flan in flanes %}
+      <div class="col-md-3 mb-4">
+        <div class="card h-100"> 
+          <img src="{{flan.imagen}}" class="card-img-top img-fluid" style="height: 200px;" alt="card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{flan.name}}</h5>
+            <p class="card-text">{{flan.descripcion}}</p>
+            <a href="#" class="btn btn-primary">Agregar al carrito</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div> 
+{% endblock 'content' %}
 {% endblock content %}
 
-{% block 'footer' %}
+{% block footer %}
 {% include "includes/footer.html" %}
-{% endblock 'footer' %}
+{% endblock footer %}
 
 
 

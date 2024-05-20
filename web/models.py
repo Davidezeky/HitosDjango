@@ -12,7 +12,7 @@ class Flan(models.Model):
     imagen = models.URLField(blank=False)
     slug = models.SlugField(unique=True, max_length=255,blank=True)
     is_private = models.BooleanField(default=False)
-    
+    precio = models.IntegerField()
     
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -20,6 +20,14 @@ class Flan(models.Model):
         super().save(*args, **kwargs)
         
     def __str__(self):
-        return self.name
+        return self.name, self.precio
     
-
+class Contacto(models.Model):
+    contacto_uuid = models.UUIDField(default=uuid.uuid4, editable=False,unique=True)
+    customer_name = models.CharField(max_length=50, blank=False)
+    customer_email = models.EmailField(blank=False)
+    message = models.TextField(blank=False)
+    
+def __str__(self):
+        return self.customer_name
+ 
